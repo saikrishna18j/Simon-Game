@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    text-align:center;
+    min-height:100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    margin:0;
+    padding:20px;
+}
+
+/* Home page button */
+#startPageBtn{
+    padding:15px 40px;
+    font-size:1.2rem;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    background: linear-gradient(135deg,#00f2fe,#4facfe);
+    color:black;
+    font-weight:600;
+    box-shadow:0 0 15px rgba(0,255,255,0.6);
+    transition:0.2s;
+}
+
+#startPageBtn:hover{
+    transform: scale(1.05);
+}
+
+/* Titles */
+h1{
+    font-size:3rem;
+    margin-bottom:0.5rem;
+    letter-spacing:2px;
+    text-shadow:0 0 15px cyan;
+}
+
+h2{
+    font-size:1.2rem;
+    margin-bottom:2rem;
+}
+
+/* Layout */
+.btn-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:2rem;
+}
+
+.line1, .line2{
+    display:flex;
+    gap:2rem;
+}
+
+/* Game buttons */
+.btn{
+    height:180px;
+    width:180px;
+    border-radius:25px;
+    border:6px solid rgba(255,255,255,0.3);
+    cursor:pointer;
+    font-size:1.2rem;
+    color:black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:0.2s;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.btn:active{
+    transform:scale(0.95);
+}
+
+/* Colors */
+.red{ background: linear-gradient(135deg,#ff5f6d,#ffc371); }
+.yellow{ background: linear-gradient(135deg,#f7971e,#ffd200); }
+.green{ background: linear-gradient(135deg,#00f2fe,#4facfe); }
+.purple{ background: linear-gradient(135deg,#667eea,#764ba2); }
+
+/* Game flash */
+.flash{
+    background:white !important;
+    box-shadow:0 0 60px white;
+    transform:scale(1.1);
+}
+
+/* Correct click */
+.userflash{
+    box-shadow:0 0 40px lime;
+}
+
+/* Wrong click */
+.wrongflash{
+    box-shadow:0 0 40px red;
+    background:#ff4d4d !important;
+}
+
+/* Game Over box */
+.gameover-box{
+    margin-top:100px;
+    padding:50px 75px;
+    border-radius:22px;
+    background: linear-gradient(135deg, #0f4c75, #2c7da0);
+    display:inline-block;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.55);
+}
+
+/* Score pill */
+#scoreText{
+    background:#0b2c3d;
+    padding:10px 24px;
+    border-radius:10px;
+    display:inline-block;
+    font-size:1.1rem;
+    margin-bottom:15px;
+}
+
+#highScoreText{
+    margin-top:12px;
+    font-size:1.1rem;
+}
+
+/* Restart button */
+#restartBtn{
+    margin-top:32px;
+    padding:13px 38px;
+    font-size:1.1rem;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    background: linear-gradient(135deg,#00f2fe,#4facfe);
+    color:black;
+    font-weight:600;
+    box-shadow:0 0 12px rgba(0,255,255,0.5);
+}
+
+/* Mobile */
+@media(max-width:600px){
+    .btn{
+        height:120px;
+        width:120px;
+    }
+}

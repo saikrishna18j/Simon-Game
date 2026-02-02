@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Over</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="gameover-box">
+    <h1>Game Over!</h1>
+    <h2 id="scoreText"></h2>
+    <h3 id="highScoreText"></h3>
+    <button id="restartBtn">Play Again</button>
+  </div>
+
+  <script>
+    /* If user refreshes this page directly, go to home page */
+    if(localStorage.getItem("showGameOver") !== "true"){
+      window.location.href = "index.html";
+    } else {
+      localStorage.removeItem("showGameOver");
+    }
+
+    let score = localStorage.getItem("lastScore");
+    let highScore = localStorage.getItem("highScore");
+
+    document.getElementById("scoreText").innerText = "Score: " + score;
+    document.getElementById("highScoreText").innerText = "High Score: " + highScore;
+
+    document.getElementById("restartBtn").addEventListener("click", function(){
+      window.location.href = "game.html";
+    });
+  </script>
+
+</body>
+</html>
